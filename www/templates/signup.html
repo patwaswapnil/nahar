@@ -37,6 +37,7 @@
                         <div class="row mt10">
                             <div class="form-date-label">Date of Birth</div>
                             <div class="form-date-btn">
+                                <button class="button icon icon-left ion-calendar" type="button" ng-click="selectDoB()">{{dob | date:'dd-MMM-yyyy'}}</button>
                             </div>
                         </div>
                     </label>
@@ -56,6 +57,7 @@
                         <div class="row mt10">
                             <div class="form-date-label">Contract Expiry Date</div>
                             <div class="form-date-btn">
+                                <button class="button icon icon-left ion-calendar" type="button" ng-click="contractDate()">{{contractEndDate | date:'dd-MMM-yyyy'}}</button>
                             </div>
                         </div>
                     </label>
@@ -69,6 +71,7 @@
                         <div class="row mt10">
                             <div class="form-date-label">Anniversary Date</div>
                             <div class="form-date-btn">
+                                <button class="button icon icon-left ion-calendar" type="button" ng-click="anniversary()">{{anniversaryDate | date:'dd-MMM-yyyy'}}</button>
                             </div>
                         </div>
                     </label>
