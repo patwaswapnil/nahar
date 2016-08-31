@@ -1,0 +1,26 @@
+ <ion-view view-title="Login" hide-nav-bar="true">
+  <ion-content class="login-bg"> 
+      <div class="  brand-logo-wrapper">
+                <div class="  wrapper-logo txt-center">
+                    <img ng-src="img/logo.png" class="logo-login" alt="">
+                </div>
+                <div class="brand-text txt-center">
+                  Nahar Amrit Shakti
+                </div>
+            </div>
+            <form class="margin30">
+                <div class="list txt-center"> 
+                    <button type="button" class="button button-small mt25 button-block button-balanced btn-login nahar-btn" ng-click="redirectAuthentication('guest')">
+                        Guest User 
+                    </button>
+                    <button type="button" class="button button-small mt25 button-block button-balanced btn-login nahar-btn" ng-click="redirectAuthentication('resident')">
+                        Resident 
+                    </button>
+                </div>
+            </form>
+          
+           
+             
+  </ion-content>
+ 
+</ion-view>

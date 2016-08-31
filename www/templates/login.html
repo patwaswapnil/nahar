@@ -1,0 +1,43 @@
+ <ion-view view-title="Login" hide-nav-bar="true">
+  <ion-content class="login-bg"> 
+      <div class="  brand-logo-wrapper">
+                <div class="  wrapper-logo txt-center">
+                    <img ng-src="img/logo.png" class="logo-login" alt="">
+                </div>
+                <div class="brand-text txt-center">
+                  Nahar Amrit Shakti
+                </div>
+            </div>
+            <form class="margin30" >
+                <div class="list txt-center">
+                    <label class=""> 
+                         <input type="text" class="text-login" ng-model="userCred.username"  placeholder="Mobile Number*">
+                    </label>
+                    <label class=""> 
+                         <input type="password" class="text-login" ng-model="userCred.password" placeholder="Password*">
+                    </label>
+                    <button type="submit" ng-disabled="!(userCred.username && userCred.password)" class="button button-small mt25 button-block button-balanced btn-login nahar-btn" ng-click="authResident(userCred)">
+                        Login 
+                    </button>
+                </div>
+            </form>
+          
+            <div class="wrapper-login-offer">
+                    <div class=" txt-center mt10">
+                        <a class="link-color" ng-click="resetPwd()">
+                        Forgot Password? 
+                    </a>
+                    </div>
+                   <div class="list txt-center"> <div class="spacer"></div></div>
+                <div class=" txt-center">
+                    <div class=" ">
+                        <a class="link-color fz18" ui-sref="app.signup">
+                        New Here? Singup Now!
+                    </a>
+                    </div>
+                </div>
+            </div>
+             
+  </ion-content>
+ 
+</ion-view>

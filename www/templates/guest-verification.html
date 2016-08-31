@@ -1,0 +1,32 @@
+ <ion-view view-title="Login" hide-nav-bar="true">
+  <ion-content class="login-bg"> 
+      <div class="  brand-logo-wrapper">
+                <div class="  wrapper-logo txt-center">
+                    <img ng-src="img/logo.png" class="logo-login" alt="">
+                </div>
+                <div class="brand-text txt-center">
+                  Nahar Amrit Shakti
+                </div>
+            </div>
+            <form class="margin30">
+                <div class="list txt-center">
+                    <label class=""> 
+                         <input type="number" class="text-login" ng-disabled="otpSent" ng-model="guest.mobile"  placeholder="Mobile Number*">
+                    </label>
+                    <label class=""> 
+                         <input type="email" class="text-login" ng-disabled="otpSent" ng-model="guest.email" placeholder="Email Id">
+                    </label>
+                    <label class=""> 
+                         <input type="text" class="text-login" ng-if="otpSent" ng-model="guest.otp" placeholder="Enter One Time Password*">
+                    </label>
+                    <button type="submit" ng-if="!otpSent" ng-disabled="!guest.mobile" class="button button-small mt25 button-block button-balanced btn-login nahar-btn" ng-click="varifyGuestUser(guest)">
+                        Continue
+                    </button>
+                    <button type="submit" ng-if="otpSent" ng-disabled="!guest.otp" ng-click="varityGuestMobile(otp)" class="button button-small mt25 button-block button-balanced btn-login nahar-btn">
+                        Submit
+                    </button>
+                </div>
+            </form> 
+  </ion-content>
+ 
+</ion-view>
