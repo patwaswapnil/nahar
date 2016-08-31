@@ -12,23 +12,23 @@
             <div class="list txt-center">
                 <div>
                     <label class="">
-                        <input type="text" class="text-login" ng-model="userInfo.first_name" placeholder="First Name">
+                        <input type="text" class="text-login" ng-model="userInfo.first_name" placeholder="First Name*">
                     </label>
                     <label class="">
-                        <input type="text" class="text-login" ng-model="userInfo.last_name" placeholder="Last Name">
+                        <input type="text" class="text-login" ng-model="userInfo.last_name" placeholder="Last Name*">
                     </label>
                     <label class="">
                         <select name="" class="select-form" id="" ng-change="getFlats(userInfo.society_id)" ng-model="userInfo.society_id" ng-options="building.id as building.name for building in naharBuildings">
-                            <option value="">Building Name</option>
+                            <option value="">Building Name*</option>
                         </select>
                     </label>
                     <label class="">
                         <select name="" class="select-form" id="" ng-model="userInfo.flat_id"  ng-change="checkPrimaryUser(userInfo.society_id, userInfo.flat_id)" ng-options="flat.id as flat.flat_no for flat in flats">
-                            <option value="">Flat No.</option> 
+                            <option value="">Flat No.*</option> 
                         </select>
                     </label>
                     <label class="">
-                        <input type="number" class="text-login" ng-model="userInfo.mobile" placeholder="Mobile Number">
+                        <input type="number" class="text-login" ng-model="userInfo.mobile" placeholder="Mobile Number*">
                     </label>
                     <label class="">
                         <input type="email" class="text-login" ng-model="userInfo.email" placeholder="Email Id">
@@ -37,7 +37,6 @@
                         <div class="row mt10">
                             <div class="form-date-label">Date of Birth</div>
                             <div class="form-date-btn">
-                                <button class="button icon icon-left ion-calendar">{{dob}}</button>
                             </div>
                         </div>
                     </label>
@@ -48,7 +47,7 @@
                 <div>
                     <label class="">
                         <select name="" class="select-form" ng-model="user.residentType" ng-change="checkTypeResident(user.residentType)" ng-if="primaryUser">
-                            <option value="">Type of Resident</option>
+                            <option value="">Type of Resident*</option>
                             <option ng-value="1">Owner</option>
                             <option ng-value="2">Tenant</option>
                         </select>
@@ -57,7 +56,6 @@
                         <div class="row mt10">
                             <div class="form-date-label">Contract Expiry Date</div>
                             <div class="form-date-btn">
-                                <button class="button icon icon-left ion-calendar">{{contractEndDate}}</button>
                             </div>
                         </div>
                     </label>
@@ -71,31 +69,34 @@
                         <div class="row mt10">
                             <div class="form-date-label">Anniversary Date</div>
                             <div class="form-date-btn">
-                                <button class="button icon icon-left ion-calendar">{{anniversaryDate}}</button>
                             </div>
                         </div>
                     </label>
                      <label class="">
                         <select name="" class="select-form" id="" ng-model="userInfo.occupation" >
                             <option value="">Select Occupation</option>
+                            <option value="">Occupation 1</option>
+                            <option value="">Occupation 2</option>
                         </select>
                     </label>
                      <label class="">
                         <select name="" class="select-form" id="" ng-model="userInfo.work_location" >
                             <option value="">Select Work Location</option>
+                            <option value=""> Work Location 1</option>
+                            <option value=""> Work Location 2</option>
                         </select>
                     </label>
                       <label class="">
                         <input type="text" class="text-login" ng-model="userInfo.company_name" placeholder="Name of the Company">
                     </label>
                     <label class="">
-                        <input type="password" class="text-login" ng-model="userInfo.password" placeholder="Password">
+                        <input type="password" class="text-login" ng-model="userInfo.password" placeholder="Password*">
                     </label>
                  <!--    <label class="">
                         <input type="password" class="text-login" ng-model="userInfo.cpassword" placeholder="Confirm Passowrd">
                     </label> -->
                     <!-- <h4 ng-if="userInfo.password != userInfo.cpassword">Password and Confimr Password Mismatch</h4> -->
-                    <button type="submit" ng-disabled="!(userInfo.first_name && userInfo.last_name && userInfo.society_id && userInfo.flat_id && userInfo.mobile && userInfo.password)" class="button button-small mt25 button-block button-balanced btn-login nahar-btn">
+                    <button type="submit" ng-disabled="!(userInfo.first_name && userInfo.last_name && userInfo.society_id && userInfo.flat_id && userInfo.mobile && userInfo.password && user.residentType)" class="button button-small mt25 button-block button-balanced btn-login nahar-btn">
                         Continue
                     </button>
                 </div>
